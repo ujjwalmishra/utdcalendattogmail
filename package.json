@@ -1,0 +1,14 @@
+{
+  "name": "node-js-sample",
+  "version": "0.2.0",
+  "description": "UTD call upadter",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13"
+  },
+  "license": "MIT"
+}
