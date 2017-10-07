@@ -1,7 +1,7 @@
 var func = {}
 var cheerio = require("cheerio");
 var moment = require('moment-timezone');
-
+var BASE_EVENT = "http://www.utdallas.edu/calendar/";
 var eventObj = {
   'summary': '',
   'location': '',
@@ -52,7 +52,7 @@ func.getJSON = function(html, callback) {
   			endTime = moment(startTime).add(30, 'minutes').format();
   		}
   		var eventTitle = $(this).find('.eventTitle').text().trim();
-  		var eventDesc = $(this).find('.events-name').html();
+  		var eventDesc = $(this).find('a').html() + ". Click " + BASE_EVENT + $(this).find('a').prop('href');
   		// console.log(i);
   		// console.log(startTime);
   		// console.log(endTime);
